@@ -4,10 +4,10 @@
 		background: rgba(146, 0, 0, 0.9);
 	}
 	::-moz-selection {
-		background: #FAB702; /* Firefox */
+		background: rgba(146, 0, 0, 0.9); /* Firefox */
 	}
 	::-webkit-selection {
-		background: #FAB702; /* Safari */
+		background: rgba(146, 0, 0, 0.9); /* Safari */
 	}
 
 
@@ -448,17 +448,17 @@ i.ico-hover:hover {
  **************************************************************** **/
 .nav-tabs.nav-top-border>li>a.active,
 .nav-tabs.nav-top-border>li>a.active:hover {
-	border-top-color:#FAB702 !important;
+	border-top-color:#950000 !important;
 }
 .nav-tabs.nav-bottom-border>li>a.active,
 .nav-tabs.nav-bottom-border>li>a.active:hover {
-	border-bottom-color:#FAB702 !important;
+	border-bottom-color:#950000 !important;
 }
 .nav-tabs.nav-alternate>li>a.active {
-	background-color: #FAB702 !important;
+	background-color: #950000 !important;
 }
 .nav-tabs>li>a.active {
-	color: #FAB702 !important;
+	color: #920000 !important;
 }
 
 
