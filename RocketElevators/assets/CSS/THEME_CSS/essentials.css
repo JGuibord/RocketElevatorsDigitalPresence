@@ -15216,10 +15216,12 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
 
 /** LAYOUT : WARNING **/
 .cart-visual-warning svg#cart-visual-svg-1 {
-	fill:#FADF4E !important;
+	fill:#920000 !important;
+	z-index: 2;
 }
 .cart-visual-warning svg#cart-visual-svg-2 {
-	fill:#F3AD1D !important;
+	fill:#0b64a0 !important;
+	z-index: 3;
 }
 
 .cart-visual-warning a {
@@ -15227,7 +15229,7 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
 }
 .cart-visual-warning .cart-visual-pin:before,
 .cart-visual-warning .cart-visual-pin .cart-visual-pin-ball {
-	background-color: #F4AD1A;
+	background-color: #333;
 }
 
 
