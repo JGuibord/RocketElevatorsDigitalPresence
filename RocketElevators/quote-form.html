@@ -146,11 +146,22 @@
 			</div> 
 <!-- /Top Nav -->
 
+<div>
+	<ul class="dropdown-menu">
+		<li><a href="#residential-q">Residential</a></li>
+		<li><a href="#commercial-q">Commercial</a></li>
+		<li><a href="#corporate-q">Corporate</a></li>
+		<li><a href="#hybrid-q">Hybrid</a></li>
+	</ul>
+</div>
 
 <!-- QUOTE FORM -->
+<div class="col-4">
+
+	
 
 			<!-- RESIDENTIAL -->
-			<div class="group col-8 no-display" id="residential-q">
+			<div class="group col-8 d-none" id="residential-q">
 
 				<label for="apartments">Number of apartments in the building</label>
 				<input type="number" id="num-apartments">
@@ -164,11 +175,11 @@
 			</div>
 
 			<!-- COMMERCIAL -->
-			<div class="group col-8 no-display" id="commercial-q">
+			<div class="group col-8 d-none" id="commercial-q">
 
 				<label for="businesses">Number of distinct businesses in the building</label>
 				<input type="number" id="num-businesses">
-				
+
 				<label for="floors">Number of floors in the building</label>
 				<input type="number" id="num-floors">
 
@@ -184,7 +195,7 @@
 			</div>
 
 			<!-- CORPORATE -->
-			<div class="group col-8 no-display" id="corporate-q">
+			<div class="group col-8 d-none" id="corporate-q">
 
 				<label for="businesses">Number of distinct businesses in the building</label>
 				<input type="number" id="num-businesses">
@@ -204,7 +215,7 @@
 			</div>
 
 			<!-- HYBRID -->
-			<div class="group col-8 no-display" id="hybrid-q">
+			<div class="group col-8 d-none" id="hybrid-q">
 
 				<label for="businesses">Number of distinct businesses in the building</label>
 				<input type="number" id="num-businesses">
@@ -225,6 +236,7 @@
 				<input type="number" id="num-hours">
 
 			</div>
+</div>
 
 <!-- /QUOTE FORM -->
 
@@ -310,5 +322,7 @@
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
 		<script src="assets/js/scripts.js"></script>
+
+		<script src="assets/plugins/jquery/quote-form.js"></script>
 	</body>
 </html>
