@@ -1,13 +1,33 @@
-$(document).ready(function () {
-    console.log("test")
-    $('.building_type').hide();
-    $('#selectMe').change(function () {
-        $('building_type').hide();
-        $('#'+$(this).val()).show();
-    })
-});
+var residential = $("#residential-q");
+var commercial = $("#commercial-q");
+var corporate = $("#corporate-q");
+var hybrid = $("#hybrid-q");
 
-$("#residential-q").hide();
-$("#commercial-q").hide();
-$("#corporate-q").hide();
-$("#hybrid-q").hide();
+$(function(){
+    $("#type-building").change(function(){
+        var building = $("#type-building option:selected").text();
+        
+        if(building == "Residential"){
+        residential.removeClass("d-none");
+        console.log(building);
+}
+
+else if(building == "Commercial"){
+    commercial.removeClass("d-none");
+    residential.addClass("d-none");
+    console.log(building);
+}
+
+else if(building == "Corporate"){
+    corporate.removeClass("d-none");
+    commercial.addClass("d-none");
+    console.log(building);
+}
+
+else if(building == "Hybrid"){
+    hybrid.removeClass("d-none");
+    corporate.addClass("d-none");
+    console.log(building);
+}
+});
+});

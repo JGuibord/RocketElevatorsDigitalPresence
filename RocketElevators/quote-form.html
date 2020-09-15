@@ -146,20 +146,17 @@
 			</div> 
 <!-- /Top Nav -->
 
-<div>
-	<ul class="dropdown-menu">
-		<li><a href="#residential-q">Residential</a></li>
-		<li><a href="#commercial-q">Commercial</a></li>
-		<li><a href="#corporate-q">Corporate</a></li>
-		<li><a href="#hybrid-q">Hybrid</a></li>
-	</ul>
-</div>
 
 <!-- QUOTE FORM -->
 <div class="col-4">
-
 	
-
+	<select class="custom-select" id="type-building">
+					<option selected>Select your type of building</option>
+					 <option value="res">Residential</option>
+					 <option value="com">Commercial</option>
+					 <option value="cor">Corporate</option>
+					 <option value="hyb">Hybrid</option>
+	</select>
 			<!-- RESIDENTIAL -->
 			<div class="group col-8 d-none" id="residential-q">
 
@@ -215,7 +212,7 @@
 			</div>
 
 			<!-- HYBRID -->
-			<div class="group col-8 d-none" id="hybrid-q">
+			<div class="group col-12 d-none" id="hybrid-q">
 
 				<label for="businesses">Number of distinct businesses in the building</label>
 				<input type="number" id="num-businesses">
