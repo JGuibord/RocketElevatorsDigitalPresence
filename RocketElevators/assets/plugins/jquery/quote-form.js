@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    console.log("Ready!");
+});
+
 var residential = $("#residential-q");
 var commercial = $("#commercial-q");
 var corporate = $("#corporate-q");
@@ -40,6 +44,7 @@ $(function(){
         }
 });
 
+
 function ResidentialData() {
     var RESapartments = parseInt($("#num-apartments").val(), 10);
     var RESfloors = parseInt($("#num-floors").val(), 10);
@@ -52,7 +57,9 @@ function ResidentialData() {
     var RESinstallFees = REStotalElev * GetInstallationFees() ||0;
     var REStotalPrice = RESelevCost * RESinstallFees ||0;
 
-$("#sub-total").text("$" + new Intl.NumberFormat().format(REStotalPrice.toFixed(2)));
-};
+console.log(REStotalPrice);
 
-});
+$("#sub-total").text("$" + new Intl.NumberFormat().format(REStotalPrice.toFixed(2)));
+console.log(sub-total);
+};
+})
