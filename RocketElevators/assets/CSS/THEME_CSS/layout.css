@@ -9726,11 +9726,8 @@ section.dark-2 div.category-grid .card {
 /* END material section color switch */
 
 
-/* start.html demo */
-.start-new-and-popular {
-	position:absolute; 
-	bottom:0px; 
-	left:20px; 
-	color:#999 !important; 
-	z-index:100;
+.quote-questions {
+	left: 200px;
+	font-size: 15px;
+	padding-top: 30px;
 }

@@ -150,7 +150,7 @@
 <!-- QUOTE FORM -->
 <div class="col-4">
 	
-	<select class="custom-select" id="type-building">
+	<select class="custom-select col-8" id="type-building" style="margin-top: 100px; margin-bottom: 5px; margin-left: 75px;">
 					<option selected>Select your type of building</option>
 					 <option value="res">Residential</option>
 					 <option value="com">Commercial</option>
@@ -158,88 +158,92 @@
 					 <option value="hyb">Hybrid</option>
 	</select>
 			<!-- RESIDENTIAL -->
-			<div class="group col-8 d-none" id="residential-q">
+			<div class="quote-questions col-8 d-none" id="residential-q">
 
-				<label for="apartments">Number of apartments in the building</label>
+				<label for="apartments">Number of apartments in the building:</label>
 				<input type="number" id="num-apartments">
 
-				<label for="floors">Number of floors in the building</label>
+				<label for="floors">Number of floors in the building:</label>
 				<input type="number" id="num-floors">
 
-				<label for="basements">Number of basements in the building</label>
+				<label for="basements">Number of basements in the building:</label>
 				<input type="number" id="num-basements">
 
 			</div>
 
 			<!-- COMMERCIAL -->
-			<div class="group col-8 d-none" id="commercial-q">
+			<div class="quote-questions col-8 d-none" id="commercial-q">
 
-				<label for="businesses">Number of distinct businesses in the building</label>
+				<label for="businesses">Number of distinct businesses in the building :</label>
 				<input type="number" id="num-businesses">
 
-				<label for="floors">Number of floors in the building</label>
+				<label for="floors">Number of floors in the building :</label>
 				<input type="number" id="num-floors">
 
-				<label for="basements">Number of basements in the building</label>
+				<label for="basements">Number of basements in the building :</label>
 				<input type="number" id="num-basements">
 
-				<label for="parkings">Number of available parking spaces</label>
+				<label for="parkings">Number of available parking spaces :</label>
 				<input type="number" id="num-parkings">
 
-				<label for="cages">Number of elevator cages to be deployed</label>
+				<label for="cages">Number of elevator cages to be deployed :</label>
 				<input type="number" id="num-cages">
 
 			</div>
 
 			<!-- CORPORATE -->
-			<div class="group col-8 d-none" id="corporate-q">
+			<div class="quote-questions col-8 d-none" id="corporate-q">
 
-				<label for="businesses">Number of distinct businesses in the building</label>
+				<label for="businesses">Number of distinct businesses in the building :</label>
 				<input type="number" id="num-businesses">
 
-				<label for="floors">Number of floors in the building</label>
+				<label for="floors">Number of floors in the building :</label>
 				<input type="number" id="num-floors">
 
-				<label for="basements">Number of basements in the building</label>
+				<label for="basements">Number of basements in the building :</label>
 				<input type="number" id="num-basements">
 
-				<label for="parkings">Number of available parking spaces</label>
+				<label for="parkings">Number of available parking spaces :</label>
 				<input type="number" id="num-parkings">
 
-				<label for="occupants">Number of occupants per floor</label>
+				<label for="occupants">Number of occupants per floor :</label>
 				<input type="number" id="num-occupants">
 
 			</div>
 
 			<!-- HYBRID -->
-			<div class="group col-12 d-none" id="hybrid-q">
+			<div class="quote-questions col-8 d-none" id="hybrid-q">
 
-				<label for="businesses">Number of distinct businesses in the building</label>
+				<label for="businesses">Number of distinct businesses in the building :</label>
 				<input type="number" id="num-businesses">
 
-				<label for="floors">Number of floors in the building</label>
+				<label for="floors">Number of floors in the building :</label>
 				<input type="number" id="num-floors">
 
-				<label for="basements">Number of basements in the building</label>
+				<label for="basements">Number of basements in the building :</label>
 				<input type="number" id="num-basements">
 
-				<label for="parkings">Number of available parking spaces</label>
+				<label for="parkings">Number of available parking spaces :</label>
 				<input type="number" id="num-parkings">
 
-				<label for="occupants">Number of occupants per floor</label>
+				<label for="occupants">Number of occupants per floor :</label>
 				<input type="number" id="num-occupants">
 
-				<label for="hours">Hours of activity of the building</label>
+				<label for="hours">Hours of activity of the building :</label>
 				<input type="number" id="num-hours">
 
 			</div>
+</div>
+<div class="col-8" style="position: absolute; left: 63%; top: 100px; margin-bottom: 50px; background-color: rgba(146, 0, 0, 0.6); width: 500px; height: 550px; border-radius: 50px">
+		<div style="font-size: 65px; font-weight: 20px; color: black; text-align: center;">RESULTS</div>
+		<div id="sub-total" style="text-align: center;"></div>
 </div>
 
 <!-- /QUOTE FORM -->
 
 
 <!-- FOOTER -->
-<footer id="footer">
+<footer id="footer" style="width: 100%; position: absolute; top: 120%">
 	<div class="container">
 
 
