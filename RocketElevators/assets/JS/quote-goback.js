@@ -42,7 +42,7 @@ $(document).ready(function(){
         console.log(building);
         }
     });
-/*
+
     $("input:radio").change(function(){
         var services = $("#services option:selected").val();
 
@@ -50,46 +50,25 @@ $(document).ready(function(){
         var SERVICES = 7565;
        }
 
-       else if (services == "premium") {
+       if (services == "premium") {
         var SERVICES = 12345;
        }
 
-       else if (services == "excelium") {
+       if (services == "excelium") {
         var SERVICES = 15400;
        }
-    }); */
-
-    $("input").keyup(function(){
-        ResidentialData();
-        });
+    }); 
 
     function ResidentialData() {
-
-        var STAN = 0;
-        var PREM = 0;
-        var EXCE = 0;
-
-        if ("#services" == "#standard") {
-            var STAN = 7565;
-        }
-        
-        if ("#services" == "#premium") {
-            var PREM = 12345;
-        } 
-
-        if ("#services" == "#excelium") {
-            var EXCE = 15400;
-        }
-    
-
         var RESapartments = parseInt($("#num-apartments").val(), 10);
         var RESfloors = parseInt($("#num-floors").val(), 10);
         var RESavgAptFlr = Math.ceil(RESapartments / RESfloors);
         var REScages = Math.ceil(RESavgAptFlr / 6);
         var REScolumnPerFlr = Math.ceil(RESfloors / 20);
         var REStotalElev = Math.ceil(REScages * REScolumnPerFlr);
-        
-        var REStotalPrice = REStotalElev * STAN;
+        var REStotalPrice = REStotalElev * 2;
+
+        console.log(REStotalElev);
 
         $("#total").val("$" + new Intl.NumberFormat().format(REStotalPrice.toFixed(2)));
     };
