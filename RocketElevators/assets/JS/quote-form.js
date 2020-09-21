@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $("#numElev, #reqElev, #elevPriceUnit, #elevTotal, #installationFee, #total").attr('readonly', true);
     console.log("Ready!");
 
     var residential = $("#residential-q");
@@ -42,46 +43,43 @@ $(document).ready(function(){
         console.log(building);
         }
     });
-/*
-    $("input:radio").change(function(){
-        var services = $("#services option:selected").val();
 
-       if (services == "standard") {
-        var SERVICES = 7565;
-       }
-
-       else if (services == "premium") {
-        var SERVICES = 12345;
-       }
-
-       else if (services == "excelium") {
-        var SERVICES = 15400;
-       }
-    }); */
 
     $("input").keyup(function(){
         ResidentialData();
+    });
+
+
+    function test() {
+    console.log(priceUnit);
+    };
+       
+        $('#standard').on('click', function () {
+            document.getElementById('elevPriceUnit').value = (7565).toFixed(2) + " $";
+            $('#elevPriceUnit').html(elevPriceUnit.value);
+            priceUnit = 7565;
+            test();
+            
         });
+    
+        $('#premium').on('click', function () {
+            document.getElementById('elevPriceUnit').value = (12345).toFixed(2) + " $";
+            $('#elevPriceUnit').html(elevPriceUnit.value);
+            priceUnit = 12345;
+            test();
+        });
+    
+        $('#excelium').on('click', function () {
+            document.getElementById('elevPriceUnit').value = (15400).toFixed(2) + " $";
+            $('#elevPriceUnit').html(elevPriceUnit.value);
+            priceUnit = 15400;
+            test();
+            
+    });
+
+
 
     function ResidentialData() {
-
-        var STAN = 0;
-        var PREM = 0;
-        var EXCE = 0;
-
-        if ("#services" == "#standard") {
-            var STAN = 7565;
-        }
-        
-        if ("#services" == "#premium") {
-            var PREM = 12345;
-        } 
-
-        if ("#services" == "#excelium") {
-            var EXCE = 15400;
-        }
-    
-
         var RESapartments = parseInt($("#num-apartments").val(), 10);
         var RESfloors = parseInt($("#num-floors").val(), 10);
         var RESavgAptFlr = Math.ceil(RESapartments / RESfloors);
@@ -89,9 +87,16 @@ $(document).ready(function(){
         var REScolumnPerFlr = Math.ceil(RESfloors / 20);
         var REStotalElev = Math.ceil(REScages * REScolumnPerFlr);
         
-        var REStotalPrice = REStotalElev * STAN;
+        document.getElementById('recommendedElev').value = '';
+        $('#recommendedElev').html(REStotalElev);
+        
+        var totalPrice = elevPriceUnit * REStotalElev;
+        document.getElementById('total').value = '';
+        $('#total').html(totalPrice);
 
-        $("#total").val("$" + new Intl.NumberFormat().format(REStotalPrice.toFixed(2)));
+        console.log(totalPrice);
+
+        $("#total").val("$" + new Intl.NumberFormat().format(totalPrice.toFixed(2)));
     };
     
 
@@ -110,6 +115,5 @@ $(document).ready(function(){
         console.log(REStotalPrice);
 
         $("#sub-total").text("$" + new Intl.NumberFormat().format(REStotalPrice.toFixed(2)));
-    
-    }
+    };
 });
